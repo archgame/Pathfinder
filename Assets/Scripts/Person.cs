@@ -60,7 +60,7 @@ public class Person : MonoBehaviour
     private void Update()
     {
         //only continue if Agent is working
-        if (Agent.enabled) { return; }
+        if (!Agent.enabled) { return; }
 
         //if target has moved, let's update the Agent's position
         if (target.transform.position != position)
